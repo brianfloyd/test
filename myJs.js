@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    
+  
+  
+  //updating this bad boy
   
 var ex = ( function(){
 
