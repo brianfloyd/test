@@ -20,7 +20,7 @@ from tornado import template
 
 
 def render_file(filename, args=None):
-    loader = template.Loader("/")
+    loader = template.Loader("/templates")
     if args:
         data = loader.load(filename).generate(**args)
     else:
@@ -34,7 +34,7 @@ class MainHandler(tornado.web.RequestHandler):
         self._SC = session_controller
 
     def get(self):
-        self.render("templates/main.html")
+        self.render("templates/index.html")
 
 
 class SessionController(object):
