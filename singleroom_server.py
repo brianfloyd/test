@@ -20,7 +20,7 @@ from tornado import template
 
 
 def render_file(filename, args=None):
-    loader = template.Loader("templates/")
+    loader = template.Loader("/")
     if args:
         data = loader.load(filename).generate(**args)
     else:
